@@ -1,3 +1,4 @@
+// Define Pin Assignments
 #define LFO_1_KNOB  A1
 #define LFO_2_KNOB  A0
 #define LFO_1_RED   11
@@ -9,6 +10,7 @@
 #define LFO_1_OUT   6
 #define LFO_2_OUT   5
 
+// Declare Variables
 int lfo_1_val_raw;
 int lfo_2_val_raw;
 float period1 = 500;
@@ -31,6 +33,7 @@ int counter2 = 0;
 
 void setup() {
   // put your setup code here, to run once:
+  // Setup pins as inputs or outputs
   Serial.begin(9600);
   pinMode(LFO_1_KNOB, INPUT);
   pinMode(LFO_2_KNOB, INPUT);
@@ -47,16 +50,20 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+
+  // Read in raw potentiometer values
   lfo_1_val_raw = analogRead(LFO_1_KNOB);
   lfo_2_val_raw = analogRead(LFO_2_KNOB);
 
+  // Scale incoming values from 1 - 20hz
   frequency1 = map(lfo_1_val_raw, 0, 1023, 1, 20);
   frequency2 = map(lfo_2_val_raw, 0, 1023, 1, 20);
 
+  // Calculate period of each frequency
   period1 = 1000 / frequency1;
   period2 = 1000 / frequency2;
 
-
+  // Debouncing for buttons
   int reading1 = digitalRead(LFO_1_SW);
   if (reading1 != lastButtonState1){
     lastDebounceTime1 = millis();
@@ -87,6 +94,7 @@ void loop() {
   }
   lastButtonState2 = reading2;
 
+  // IF statement for waveform selection based on button counter value
   if (waveformSelect1 == 0){
     analogWrite(LFO_1_OUT, sine(period1)*255);
     analogWrite(LFO_1_BLUE, sine(period1)*255);
@@ -133,28 +141,32 @@ void loop() {
 }
 
 
-
+// Initiating unipolar sawtooth waveform
 float saw(float period){
   float sawtoothValue = (fmod(((millis() * 255) / period), 255) / 255.0);
   return sawtoothValue;
 }
 
+// Calcuating sine wave from sawtooth waveform
 float sine(float period){
   float sawValue = saw(period);
   float sineValue = ((sin((sawValue) * 2 * PI) + 1.0) / 2.0);
   return sineValue;
 }
 
+// Inverse sawtooth for triangle generation
 float invSaw(float period){
   float invSawValue = (saw(period) * -1.0) + 1.0;
   return invSawValue;
 }
 
+// Calculating triangle waveform by clipping and adding sawtooth and inverse sawtooth waveform
 float tri(float period){
   float triValue = ((constrain(saw(period), 0.5, 1.0) + constrain(invSaw(period), 0.5, 1.0) - 1.0) * 2.0);
   return triValue;
 }
 
+// Calcuating square waveform
 float square(float period){
   float squareValue;
   float sawValue = saw(period);
