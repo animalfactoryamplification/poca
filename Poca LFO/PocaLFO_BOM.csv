@@ -1,0 +1,18 @@
+"Qty";"Value";"Device";"Package";"Parts";"Description";"COPYRIGHT";"MANUFACTURER_PART_NUMBER";"MFR_NAME";"POPULARITY";"PROD_ID";"SF_SKU";"SPICEPREFIX";
+"1";"";"ARDUINO_NANO";"ARDUINO_NANO";"ARDUINO_NANO1";"Arduino Nano V3.0";"";"";"";"";"";"";"";
+"1";"";"LED3MM";"LED3MM";"LED1";"LED";"";"";"";"97";"";"";"";
+"2";"";"PINHD-1X2";"1X02";"POWER-IN, POWER-OUT";"PIN HEADER";"";"";"";"98";"";"";"";
+"1";"100n";"C2.5/4";"C2.5-4";"C2";"CAPACITOR";"";"";"";"6";"";"";"";
+"2";"100Ω";"R-EU_0207/10";"0207/10";"R9, R10";"RESISTOR, European symbol";"";"";"";"81";"";"";"R";
+"4";"10k";"R-EU_0207/10";"0207/10";"R1, R2, R4, R5";"RESISTOR, European symbol";"";"";"";"81";"";"";"R";
+"2";"10kb";"EVUF3M";"EVUFXM";"LFO_1, LFO_2";"9 mm Square Rotary Potentiometers";"";"";"";"";"";"";"";
+"1";"10u";"CPOL-EUE5-5";"E5-5";"C3";"POLARIZED CAPACITOR, European symbol";"";"";"";"6";"";"";"C";
+"1";"1N5817-B";"1N5817-B";"DO41-7.6";"D2";"1.0A SCHOTTKY BARRIER RECTIFIER";"";"";"";"0";"";"";"";
+"3";"1k";"R-EU_0207/10";"0207/10";"R3, R7, R11";"RESISTOR, European symbol";"";"";"";"81";"";"";"R";
+"2";"470n";"C5/3.5";"C5B3.5";"C1, C4";"CAPACITOR";"";"";"";"3";"";"";"";
+"2";"470Ω";"R-EU_0207/10";"0207/10";"R6, R8";"RESISTOR, European symbol";"";"";"";"81";"";"";"R";
+"2";"LED-RGB-CA-THRUCLEAR";"LED-RGB-CA-THRUCLEAR";"LED-RGB-THRU";"D1, D6";"RGB Through-hole common anode";"";"";"";"";"DIO-10631";"";"";
+"1";"MCP6002";"TL072P";"DIL08";"IC1";"OP AMP";"";"";"";"13";"";"";"";
+"2";"MOMENTARY-SWITCH-SPST-PTH-6.0MM";"MOMENTARY-SWITCH-SPST-PTH-6.0MM";"TACTILE_SWITCH_PTH_6.0MM";"SW1, SW2";"Momentary Switch (Pushbutton) - SPST";"";"";"";"";" SWCH-08441";"COM-00097";"";
+"1";"TL2230OAF140";"TL2230OAF140";"TL2230_EWI";"ON-OFF";"";"Copyright (C) 2023 Ultra Librarian. All rights reserved.";"TL2230OAF140";"E-Switch";"";"";"";"";
+"2";"WQP-PJ301M-12_JACK";"WQP-PJ301M-12_JACK";"WQP-PJ301M-12_JACK";"LFO_1_OUT, LFO_2_OUT";"";"";"";"";"";"";"";"";
